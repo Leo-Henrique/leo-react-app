@@ -1,0 +1,75 @@
+// responsive
+@mixin respBKP($size) {
+    @media (
+        #{map-get($mediaQuery, property)}: 
+        #{
+            map-get(map-get($mediaQuery, sizes), xxl) + 
+            map-get($mediaQuery, unit)
+        }) {
+        @content;
+    }
+}
+@mixin respDT {
+    @media not all and (hover: none) {
+        @content;
+    }
+}
+
+// transitions and states
+@mixin transition($element, $properties...) {
+    transition-property: $properties;
+    transition-timing-function: map-get($transitions, timingFunction);
+
+    @if $element == "global" {
+        transition-duration: map-get($transitions, globalDuration);
+    } @else if $element == "button" {
+        transition-duration: map-get($transitions, buttonDuration);
+    }
+}
+
+@mixin state($element, $states) {
+    $propertiesMap: map-get($states, default);
+    @include transition($element, map-keys($propertiesMap));
+
+    @each $state, $properties in $states {
+        @each $property, $value in $properties {
+
+            @if $state == default {
+                #{$property}: $value;
+
+            } @else if $state == hover {
+                @include respDT {
+                    &:hover {
+                        #{$property}: $value;
+                    }
+                }
+
+            } @else if $state == active {
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+}
+/*
+use state mixin
+
+button {
+    font-size: 4.2rem;
+    @include state("button", (
+        default: (
+            color: #000,
+            background-color: #FFF
+        ),
+        hover: (
+            color: #FFF,
+            background-color: #000,
+        ),
+        active: (
+            color: blue,
+            background-color: #000
+        )
+    ));
+}
+*/

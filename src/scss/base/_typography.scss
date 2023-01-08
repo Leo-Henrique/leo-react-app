@@ -1,0 +1,11 @@
+body {
+    @include font-size(map-get($fontSizes, body));
+    font-family: "Arial", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+h1 {
+    @include font-size(map-get($fontSizes, h1));
+    line-height: 1.2;
+    font-weight: 700;
+}
