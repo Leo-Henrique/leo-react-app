@@ -22,13 +22,15 @@ npm install
 npm install normalize.css leo-css-reset rfs sass vite-plugin-svgr
 ```
 
-### Remove default Vite files 
+### Remove default Vite files and created public folder
 
 Replace all files Vite generated.
 
 ```bash
 rm index.html .gitignore vite.config.js -f
 rm -r public src
+mkdir public
+mkdir public/assets
 ```
 
 ### Clone my folders structure (boilerplate)
