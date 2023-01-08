@@ -10,7 +10,7 @@ Select React framework and JavaScript variant.
 npm create vite@latest
 ```
 
-### Install vite dependencies
+### Install Vite dependencies
 
 ```bash
 npm install
@@ -22,12 +22,21 @@ npm install
 npm install normalize.css leo-css-reset rfs sass vite-plugin-svgr
 ```
 
-### Clone my folders structure (boilerplate)
+### Remove default Vite files 
 
 Replace all files Vite generated.
 
 ```bash
-git clone ...
+rm index.html .gitignore vite.config.js -f
+rm -r public src
+```
+
+### Clone my folders structure (boilerplate)
+
+Afterwards, move all files and folders into your project.
+
+```bash
+git clone https://github.com/Leo-Henrique/frontend-boilerplate.git
 ```
 
 ## Use 
