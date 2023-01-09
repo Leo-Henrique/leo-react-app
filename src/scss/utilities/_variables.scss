@@ -13,7 +13,7 @@ $mediaQuery: (
 
 $rfs-rem-value: 10;
 $rfs-factor: 5;
-$rfs-breakpoint: map-get(map-get($mediaQuery, sizes), lg);
+$rfs-breakpoint: map-get(map-get($mediaQuery, sizes), xl);
 
 $grid: (
     containerDefault: 1320px,
@@ -21,7 +21,7 @@ $grid: (
     containerXl: 960px,
     containerLg: 720px,
     containerMd: 540px,
-    gutter: 30px,
+    gutter: 30px
 );
 
 $fontSizes: (

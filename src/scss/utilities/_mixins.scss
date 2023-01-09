@@ -1,13 +1,14 @@
 // responsive
 @mixin respBKP($size) {
-    @media (
-        #{map-get($mediaQuery, property)}: 
-        #{
-            map-get(map-get($mediaQuery, sizes), xxl) + 
-            map-get($mediaQuery, unit)
-        }) {
-        @content;
-    }
+	@media (
+		#{map-get($mediaQuery, property)}:
+		#{
+			map-get(map-get($mediaQuery, sizes), $size) + 
+			map-get($mediaQuery, unit)
+		}
+	) {
+		@content;
+	}
 }
 @mixin respDT {
     @media not all and (hover: none) {
