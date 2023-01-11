@@ -1,7 +1,7 @@
 .container {
     max-width: map-get($grid, containerDefault);
-    padding-left: map-get($grid, gutter) / 2;
-    padding-right: map-get($grid, gutter) / 2;
+    padding-left: calc(map-get($grid, gutter) / 2);
+    padding-right: calc(map-get($grid, gutter) / 2);
 	@include center;
 
     @include respBKP(xxl) {
