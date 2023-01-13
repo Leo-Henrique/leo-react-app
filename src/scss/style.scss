@@ -1,19 +1,20 @@
-// utilities / sass tools
+// sass tools
 @import 
 "utilities/variables",
 "/node_modules/rfs/scss",
 "utilities/mixins";
 
-// base / global styles
+// global styles
 @import 
 "normalize.css",
 "leo-css-reset",
 "base/typography";
 
-// layout / header, footer
-@import
-"layout/grid";
+// layout
+@import "layout/grid";
 
 // components / widgets
+@import "components/button";
 
-// pages / pages specific styles
+// pages specific styles
+@import "pages/home";

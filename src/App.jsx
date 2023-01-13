@@ -1,20 +1,24 @@
-import React from "react";
 import "./scss/style.scss";
+import SVGReact from "./assets/react.svg";
 
-const App = () => {
+export default function App() {
     return (
-        <div>
-            <h1>My Title!</h1>
+		<main className="app">
+			<div className="app__react">
+				<a href="https://reactjs.org/"
+				target="_blank"
+				rel="external noopener noreferrer">
+					<SVGReact />
+				</a>
+			</div>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam ipsum dolores praesentium aut accusantium fugit beatae facilis! Exercitationem quia earum adipisci quasi cumque tempore soluta facere esse ea enim.
-            </p>
+			<h1 className="app__title">Leo React App</h1>
 
-            <button>
-                My button!
-            </button>
-        </div>
-    );
-};
-
-export default App;
+			<a className="btn"
+			href="https://github.com/Leo-Henrique/leo-react-app"
+			target="_blank">
+				Acessar repositório
+			</a>
+		</main>
+	);
+}

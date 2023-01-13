@@ -1,0 +1,31 @@
+.btn {
+	$shadowState: 0 5px 14px transparentize(map-get($colors, primary), 0.75);
+	display: inline-block;
+	padding: 1.6rem 5rem;
+	border-radius: 20px;
+	color: map-get($colors, supportLight1);
+	background: linear-gradient(
+		266.57deg, 
+		map-get($colors, primaryDark),
+		map-get($colors, primary)
+	);
+	@include state("button", (
+		default: (
+			opacity: 1,
+			box-shadow: initial
+		),
+		hover: (
+			opacity: 0.75,
+			box-shadow: $shadowState
+		),
+		active: (
+			opacity: 0.45,
+			box-shadow: $shadowState
+		)
+	));
+
+	@include breakpoint(sm) {
+		border-radius: 15px;
+		padding: 1.4rem 3.5rem;
+	}
+}

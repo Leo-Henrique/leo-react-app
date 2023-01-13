@@ -1,16 +1,16 @@
 // responsive
-@mixin respBKP($size) {
-	@media (
+@mixin breakpoint($size) {
+    @media (
 		#{map-get($mediaQuery, property)}:
 		#{
 			map-get(map-get($mediaQuery, sizes), $size) + 
 			map-get($mediaQuery, unit)
 		}
 	) {
-		@content;
-	}
+        @content;
+    }
 }
-@mixin respDT {
+@mixin desktop {
     @media not all and (hover: none) {
         @content;
     }
@@ -18,14 +18,15 @@
 
 // transitions and states
 @mixin transition($element, $properties...) {
+	$durations: map-get($transitions, durations);
     transition-property: $properties;
     transition-timing-function: map-get($transitions, timingFunction);
 
-    @if $element == "global" {
-        transition-duration: map-get($transitions, globalDuration);
-    } @else if $element == "button" {
-        transition-duration: map-get($transitions, buttonDuration);
-    }
+	@each $type, $value in $durations {
+		@if $element == $type {
+			transition-duration: $value;
+		}
+	}
 }
 
 @mixin state($element, $states) {
@@ -34,17 +35,14 @@
 
     @each $state, $properties in $states {
         @each $property, $value in $properties {
-
             @if $state == default {
                 #{$property}: $value;
-
             } @else if $state == hover {
-                @include respDT {
+                @include desktop {
                     &:hover {
                         #{$property}: $value;
                     }
                 }
-
             } @else if $state == active {
                 &:active {
                     #{$property}: $value;
@@ -56,27 +54,6 @@
 
 // general
 @mixin center {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
-/*
-use state mixin
-
-button {
-    font-size: 4.2rem;
-    @include state("button", (
-        default: (
-            color: #000,
-            background-color: #FFF
-        ),
-        hover: (
-            color: #FFF,
-            background-color: #000,
-        ),
-        active: (
-            color: blue,
-            background-color: #000
-        )
-    ));
-}
-*/

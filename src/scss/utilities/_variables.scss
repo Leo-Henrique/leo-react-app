@@ -11,10 +11,12 @@ $mediaQuery: (
     )
 );
 
+// rfs config
 $rfs-rem-value: 10;
 $rfs-factor: 5;
 $rfs-breakpoint: map-get(map-get($mediaQuery, sizes), xl);
 
+// your UI
 $grid: (
     containerDefault: 1320px,
     containerXxl: 1140px,
@@ -23,24 +25,26 @@ $grid: (
     containerMd: 540px,
     gutter: 30px
 );
-
 $fontSizes: (
-    h1: 5.2rem,
-    h2: 4.2rem,
+    h1: 7.8rem,
     body: 1.8rem
 );
-
 $colors: (
-    primary: #00F,
+    primary: rgba(0, 178, 255, 0.9),
+	primaryDark: #0085FF,
     supportDark1: #000,
+    supportDark2: #171717,
+    supportDark3: #171823,
     supportLight1: #FFF,
+    supportLight2: #E9F0F4,
     success: #01CC88,
     warning: #FFC107,
     danger: #DC3545
 );
-
 $transitions: (
-    globalDuration: 300ms,
-    buttonDuration: 200ms,
-    timingFunction: ease-in-out
+    timingFunction: ease-in-out,
+	durations: (
+		global: 300ms,
+		button: 200ms,
+	)
 );

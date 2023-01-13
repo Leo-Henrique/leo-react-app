@@ -2,21 +2,21 @@
     max-width: map-get($grid, containerDefault);
     padding-left: calc(map-get($grid, gutter) / 2);
     padding-right: calc(map-get($grid, gutter) / 2);
-	@include center;
+    @include center;
 
-    @include respBKP(xxl) {
+    @include breakpoint(xxl) {
         max-width: map-get($grid, containerXxl);
     }
-    @include respBKP(xl) {
+    @include breakpoint(xl) {
         max-width: map-get($grid, containerXl);
     }
-    @include respBKP(lg) {
+    @include breakpoint(lg) {
         max-width: map-get($grid, containerLg);
     }
-    @include respBKP(md) {
+    @include breakpoint(md) {
         max-width: map-get($grid, containerMd);
     }
-    @include respBKP(sm) {
+    @include breakpoint(sm) {
         max-width: 100%;
     }
 }

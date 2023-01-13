@@ -2,8 +2,12 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import viteSvgr from "vite-plugin-svgr";
 
-// https://vitejs.dev/config/
+const viteSvgrConfigs = { exportAsDefault: true };
+
 export default defineConfig({
-    plugins: [react(), viteSvgr()],
-    // base: "/$$your-project-url"
+    plugins: [
+		react(), 
+		viteSvgr(viteSvgrConfigs)
+	],
+	base: "/leo-react-app"
 });
