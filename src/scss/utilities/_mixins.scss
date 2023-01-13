@@ -1,0 +1,59 @@
+// responsive
+@mixin breakpoint($size) {
+    @media (
+		#{map-get($mediaQuery, property)}:
+		#{
+			map-get(map-get($mediaQuery, sizes), $size) + 
+			map-get($mediaQuery, unit)
+		}
+	) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media not all and (hover: none) {
+        @content;
+    }
+}
+
+// transitions and states
+@mixin transition($element, $properties...) {
+	$durations: map-get($transitions, durations);
+    transition-property: $properties;
+    transition-timing-function: map-get($transitions, timingFunction);
+
+	@each $type, $value in $durations {
+		@if $element == $type {
+			transition-duration: $value;
+		}
+	}
+}
+
+@mixin state($element, $states) {
+    $propertiesMap: map-get($states, default);
+    @include transition($element, map-keys($propertiesMap));
+
+    @each $state, $properties in $states {
+        @each $property, $value in $properties {
+            @if $state == default {
+                #{$property}: $value;
+            } @else if $state == hover {
+                @include desktop {
+                    &:hover {
+                        #{$property}: $value;
+                    }
+                }
+            } @else if $state == active {
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+}
+
+// general
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
