@@ -1,5 +1,12 @@
 import "./scss/style.scss";
+import SVGReact from "./assets/react.svg";
 
 export default function App() {
-    return <p>Hello World!</p>;
+    return (
+		<>
+		<SVGReact />
+
+		<p>Hello World!</p>
+		</>
+	);
 }
