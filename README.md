@@ -84,7 +84,7 @@ npm start
 
 ## Recursos úteis
 
-Alguns links que contem minhas inspirações ao criar a arquitetura / boilerplate em SASS.
+Alguns links que contém minhas inspirações ao criar a arquitetura / boilerplate em SASS.
 
 * [Media queries max-width do Bootstrap](https://getbootstrap.com/docs/5.3/layout/breakpoints/#max-width)
 * [Containers responsivos do Bootstrap](https://getbootstrap.com/docs/5.3/layout/containers/#responsive-containers)
