@@ -8,5 +8,6 @@ export default defineConfig({
     plugins: [
 		react(), 
 		viteSvgr(viteSvgrConfigs)
-	]
+	],
+	base: "/leo-react-app"
 });
