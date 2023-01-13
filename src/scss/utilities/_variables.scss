@@ -11,10 +11,12 @@ $mediaQuery: (
     )
 );
 
+// rfs config
 $rfs-rem-value: 10;
 $rfs-factor: 5;
 $rfs-breakpoint: map-get(map-get($mediaQuery, sizes), xl);
 
+// your UI
 $grid: (
     containerDefault: 1320px,
     containerXxl: 1140px,
@@ -23,13 +25,11 @@ $grid: (
     containerMd: 540px,
     gutter: 30px
 );
-
 $fontSizes: (
     h1: 5.2rem,
     h2: 4.2rem,
     body: 1.8rem
 );
-
 $colors: (
     primary: #00F,
     supportDark1: #000,
@@ -38,7 +38,6 @@ $colors: (
     warning: #FFC107,
     danger: #DC3545
 );
-
 $transitions: (
     timingFunction: ease-in-out,
 	durations: (
