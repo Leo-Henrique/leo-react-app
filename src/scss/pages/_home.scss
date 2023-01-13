@@ -13,7 +13,7 @@ body {
 
 .app {
 	text-align: center;
-	padding: 3rem map-get($grid, gutter) / 2;
+	padding: 3rem calc(map-get($grid, gutter) / 2);
 
 	&__react {
 		@include margin-bottom(5rem);

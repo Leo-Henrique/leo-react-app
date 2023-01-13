@@ -35,7 +35,7 @@ Gosto de utilizar o termo **boilerplate** para se referir a leo-react-app pelo m
 
 ## Recursos
 
-* React com [Vite](https://vitejs.dev/)
+* [React](https://pt-br.reactjs.org/) com [Vite](https://vitejs.dev/)
 	* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react) - plugin oficial do Vite para o React (inclui recursos como [react-refresh](https://www.npmjs.com/package/react-refresh) e [JSX runtime](https://github.com/alloc/vite-react-jsx#faq), por exemplo)
 	* [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr) - loader para transformar SVGs em componentes React (baseado em [SVGR](https://react-svgr.com/))
 * [SASS](https://www.npmjs.com/package/sass) - implementação JS do pré-processador SASS
@@ -63,7 +63,7 @@ npm install
 
 ### Inicie o servidor de desenvolvimento
 
-Uma nova guia [localhost:5173](http://localhost:5173/) será aberta no seu navegador.
+Uma nova guia [localhost:5173/leo-react-app](http://localhost:5173/leo-react-app) será aberta no seu navegador.
 
 ```
 npm start
@@ -81,47 +81,6 @@ npm start
 * `npm start` - inicia o servidor de desenvolvimento e abre em seu navegador.
 * `npm run build` - minifica o aplicativo para produção.
 * `npm run preview` - visualize localmente sua produção em seu navegador.
-
-## Principais uso / exemplos com SASS
-
-Utilize os mixins que pré defini pensando em simplificar interfaces responsivas e consistentes. Veja-os sobre o capô em "*src/scss/utilities/_mixins.scss*"
-
-Configure toda a UI do seu aplicativo em "*src/scss/utilities/_variables.scss*". Consulte o mesmo arquivo caso os mixins ainda soam confusos.
-
-### Breakpoints
-
-Utilize um breakpoint passando como argumento o nome utilizado na chave do mapa `sizes` em `$mediaQuery`:
-
-```scss
-@include breakpoint(sm) {
-	// estilos para o ponto de interrupção
-}
-```
-
-### Incluir estado
-
-Simplifique o uso de `:hover` e : `active`, setando cada estado com seu respectivo estilo / propriedade.
-
-```scss
-a {
-    @include state("button", (
-        default: (
-            color: #FFF,
-            background-color: #000
-        ),
-        hover: (
-            color: #000,
-            background-color: #FFF
-        ),
-        active: (
-            color: #00F,
-            background-color: #F0F
-        )
-    ));
-}
-```
-
-As transições são automaticamente acrescentadas de acordo com as chaves do mapa `default` e da preferência utilizada no primeiro argumento (usa a configuração do mapa `$transitions` disponível em *_variables.scss*).
 
 ## Recursos úteis
 
