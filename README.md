@@ -36,13 +36,13 @@ style="margin-bottom: 15px">
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Leo-Henrique/leo-react-app/blob/main/README.md)
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-react-app/blob/main/README-pt-BR.md)
 
-## Introduction
+## 🔎 Introduction
 
 `leo-react-app` it is a template / development environment in React and SASS for the web using Vite.
 
 I like to use the term **boilerplate** to refer to leo-react-app because it is intended to provide a minimal but rarely unnecessary or wasteful folder and command structure in a React-based front-end app with SASS.
 
-## Recursos
+## 💻 Resources
 
 * [React](https://pt-br.reactjs.org/) with [Vite](https://vitejs.dev/)
 	* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react) - official Vite plugin for React (includes features like [react-refresh](https://www.npmjs.com/package/react-refresh) and [JSX runtime](https://github.com/alloc/vite-react-jsx#faq), for example)
@@ -52,7 +52,7 @@ I like to use the term **boilerplate** to refer to leo-react-app because it is i
 * [normalize.css](https://github.com/necolas/normalize.css) - normalizes default styling on some HTML elements consistently across browsers
 * [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset) - redefines most styles and sets CSS standards (based on [Meyer Web Reset](https://meyerweb.com/eric/tools/css/reset/)).
 
-## Getting stated
+## 🚀 Getting stated
 
 This repository uses the [npm](https://www.npmjs.com/) to manage third-party packages. [Install NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) after installing [Node.js](https://nodejs.org/pt-br/).
 
@@ -78,7 +78,7 @@ A new tab [localhost:5173/leo-react-app](http://localhost:5173/leo-react-app) wi
 npm start
 ```
 
-## Configure the boilerplate for your application
+## ⚙️ Configure the boilerplate for your application
 
 * In `vite.config.js`, change [base](https://vitejs.dev/config/shared-options.html#base) to a URL that will use the public basepath. Exclude if you are not going to deploy the application.
 * In `public/assets/`, include your app's favicons. I like to use the [Real Favicon Generator](https://realfavicongenerator.net/) to generate my favicons.
@@ -92,13 +92,13 @@ npm start
 		* `components/button` - example of how to use the `state` mixin.
 		* `pages/home` - simple example of how to compose your interface using all SASS features with BEM CSS.
 
-## Scripts 
+## 👨‍💻 Scripts 
 
 * `npm start` - starts the development server and opens it in your browser.
 * `npm run build` - minifies the app for production.
 * `npm run preview` - locally view your production in your browser.
 
-## Useful resources
+## 🔗 Useful resources
 
 Some links that contain my inspirations when creating the architecture and all other resources in SASS.
 

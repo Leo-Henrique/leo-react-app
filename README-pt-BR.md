@@ -36,13 +36,13 @@ style="margin-bottom: 15px">
 [![en](https://img.shields.io/badge/idioma-en-red.svg)](https://github.com/Leo-Henrique/leo-react-app/blob/main/README.md)
 [![pt-br](https://img.shields.io/badge/idioma-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-react-app/blob/main/README-pt-BR.md)
 
-## Introdução
+## 🔎 Introdução
 
 `leo-react-app` se trata de um template / ambiente de desenvolvimento em React e SASS para web utilizando Vite.
 
 Gosto de utilizar o termo **boilerplate** para se referir a leo-react-app pelo mesmo possuir o objetivo de fornecer uma estrutura de pastas e comandos mínima, mas raramente desnecessária ou desproveitosa em um aplicativo front-end baseado em React com SASS.
 
-## Recursos
+## 💻 Recursos
 
 * [React](https://pt-br.reactjs.org/) com [Vite](https://vitejs.dev/)
 	* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react) - plugin oficial do Vite para o React (inclui recursos como [react-refresh](https://www.npmjs.com/package/react-refresh) e [JSX runtime](https://github.com/alloc/vite-react-jsx#faq), por exemplo)
@@ -52,7 +52,7 @@ Gosto de utilizar o termo **boilerplate** para se referir a leo-react-app pelo m
 * [normalize.css](https://github.com/necolas/normalize.css) - normaliza estilizações padrões em alguns elementos HTML de forma consistente entre os navegadores
 * [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset) - redefine a maioria das estilizações e define padrões CSS (baseado no [Meyer Web Reset](https://meyerweb.com/eric/tools/css/reset/)).
 
-## Iniciando
+## 🚀 Iniciando
 
 Este repositório utiliza o [npm](https://www.npmjs.com/) para gerenciar os pacotes de terceiros. Efetue a [instalação do NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) após a instalação do [Node.js](https://nodejs.org/pt-br/).
 
@@ -78,7 +78,7 @@ Uma nova guia [localhost:5173/leo-react-app](http://localhost:5173/leo-react-app
 npm start
 ```
 
-## Configure o boilerplate para sua aplicação
+## ⚙️ Configure o boilerplate para sua aplicação
 
 * Em `vite.config.js`, altere [base](https://vitejs.dev/config/shared-options.html#base) para uma URL que utilizará o caminho base público. Exclua caso não for fazer o deploy da aplicação.
 * Em `public/assets/`, inclua os favicons da sua aplicação. Eu gosto de utilizar o [Real Favicon Generator](https://realfavicongenerator.net/) para gerar meus favicons.
@@ -92,13 +92,13 @@ npm start
 		* `components/button` - exemplo de como utilizar o mixin `state`.
 		* `pages/home` - exemplo simples de como compor sua interface utilizando todos os recursos SASS com CSS BEM.
 
-## Scripts 
+## 👨‍💻 Scripts 
 
 * `npm start` - inicia o servidor de desenvolvimento e abre em seu navegador.
 * `npm run build` - minifica o aplicativo para produção.
 * `npm run preview` - visualize localmente sua produção em seu navegador.
 
-## Recursos úteis
+## 🔗 Recursos úteis
 
 Alguns links que contém minhas inspirações ao criar a arquitetura e todos os outros recursos em SASS.
 
