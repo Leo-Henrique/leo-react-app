@@ -57,7 +57,7 @@ This repository uses the [npm](https://www.npmjs.com/) to manage third-party pac
 
 ### Cloning the repository
 
-You can [create a new repository from this one](https://github.com/Leo-Henrique/leo-react-app/generate) or use [degit](https://github.com/Rich-Harris/degit) to clone `leo-react-app`:
+Use [degit](https://github.com/Rich-Harris/degit) to clone `leo-react-app`:
 
 ```bash
 npx degit leo-henrique/leo-react-app#app your-app

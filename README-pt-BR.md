@@ -57,7 +57,7 @@ Este repositório utiliza o [npm](https://www.npmjs.com/) para gerenciar os paco
 
 ### Clonando o repositório
 
-Você pode [criar um novo repositório a partir deste](https://github.com/Leo-Henrique/leo-react-app/generate) ou utilizar o [degit](https://github.com/Rich-Harris/degit) para clonar `leo-react-app`:
+Utilize o [degit](https://github.com/Rich-Harris/degit) para clonar o `leo-react-app`:
 
 ```bash
 npx degit leo-henrique/leo-react-app#app seu-aplicativo
