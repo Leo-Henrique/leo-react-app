@@ -1,6 +1,7 @@
 # leo-react-app
 
-<div align="center">
+<div align="center"
+style="margin-bottom: 15px">
 	<img src="https://user-images.githubusercontent.com/72027449/212686494-3c9d878f-c269-4520-aa61-649a2d94f691.gif"
 	alt="Screenshot of the Leo React App homepage" />
 </div>
