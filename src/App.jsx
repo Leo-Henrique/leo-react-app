@@ -12,12 +12,13 @@ export default function App() {
 				</a>
 			</div>
 
-			<h1 className="app__title">Leo React App</h1>
+			<h1 className="app__title"
+			translate="no">Léo React App</h1>
 
 			<a className="btn"
 			href="https://github.com/Leo-Henrique/leo-react-app"
 			target="_blank">
-				Acessar repositório
+				Access repository
 			</a>
 		</main>
 	);
