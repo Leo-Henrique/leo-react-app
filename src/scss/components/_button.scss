@@ -9,6 +9,18 @@
 		map-get($colors, primaryDark),
 		map-get($colors, primary)
 	);
+	/*
+		state mixin = first argument
+
+		Keys names defined in "durations" map, inside on "$transitions" map.
+	*/
+	/*
+		state mixin = second argument
+
+		Map containing states (other maps) called "default", "hover" and "active". Add one or more properties to these inner maps with whatever value you want for the respective state.
+
+		The keys / properties defined in "default" are the same properties that will be added to the transitions specified in the map "$transitions".
+	*/
 	@include state("button", (
 		default: (
 			opacity: 1,
