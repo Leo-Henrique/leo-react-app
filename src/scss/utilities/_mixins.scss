@@ -17,18 +17,14 @@
 }
 
 // transitions and states
-@mixin transition($element, $properties...) {
-	$durations: map-get($transitions, durations);
+@mixin transition($type, $properties...) {
+	$transition: map-get($transitions, $type);
     transition-property: $properties;
-    transition-timing-function: map-get($transitions, timingFunction);
 
-	@each $type, $value in $durations {
-		@if $element == $type {
-			transition-duration: $value;
-		}
+	@each $property, $value in $transition {
+		transition-#{$property}: $value;
 	}
 }
-
 @mixin state($element, $states) {
     $propertiesMap: map-get($states, default);
     @include transition($element, map-keys($propertiesMap));
