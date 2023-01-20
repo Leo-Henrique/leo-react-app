@@ -47,6 +47,26 @@
         }
     }
 }
+@mixin stateSVG($element, $states, $property) {
+    @each $state, $value in $states {
+        @if $state == default {
+            path {
+                #{$property}: $value;
+                @include transition($element, $property);
+            }
+        } @else if $state == hover {
+            @include desktop {
+                &:hover path {
+                    #{$property}: $value;
+                }
+            }
+        } @else if $state == active {
+            &:active path {
+                #{$property}: $value;
+            }
+        }
+    }
+}
 
 // general
 @mixin center {

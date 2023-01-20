@@ -1,14 +1,22 @@
 .btn {
 	$shadowState: 0 5px 14px transparentize(map-get($colors, primary), 0.75);
-	display: inline-block;
-	padding: 1.6rem 5rem;
+	padding: 1.6rem 4rem;
 	border-radius: 20px;
+	display: inline-flex;
+    align-items: center;
+    column-gap: 0.6rem;
+    white-space: nowrap;
 	color: map-get($colors, supportLight1);
 	background: linear-gradient(
 		266.57deg, 
 		map-get($colors, primaryDark),
 		map-get($colors, primary)
 	);
+    
+	@include breakpoint(sm) {
+		border-radius: 15px;
+		padding: 1.4rem 3rem;
+	}
 	/*
 		state mixin = first argument
 
@@ -35,9 +43,18 @@
 			box-shadow: $shadowState
 		)
 	));
+    /*
+		stateSVG mixin
 
-	@include breakpoint(sm) {
-		border-radius: 15px;
-		padding: 1.4rem 3.5rem;
-	}
+        The same as the "state" mixin, but instead of defining a map with properties for each state, only the colors are defined.
+
+        These colors along with the transition will be used in the "path" element of the svg, in the property specified in the third argument of the mixin.
+
+        The svgs normally have colors defined in "fill", but they can also be "stroke" or other properties.
+    */
+    @include stateSVG("button", (
+        default: map-get($colors, secondary),
+        hover: map-get($colors, primaryLight),
+        active: map-get($colors, primaryDark)
+    ), fill);
 }

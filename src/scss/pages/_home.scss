@@ -21,7 +21,6 @@ body {
 		a {
 			display: block;
 			padding: 1.2rem;
-			animation: logoSpin infinite 25s linear;
 
 			@include state("button", (
 				default: (opacity: 1),
@@ -35,6 +34,7 @@ body {
 			width: 250px;
 			height: auto;
 			@include center;
+			animation: logoSpin infinite 25s linear;
 
 			@include breakpoint(sm) {
 				width: 180px;
