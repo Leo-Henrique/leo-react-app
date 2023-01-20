@@ -29,17 +29,23 @@ $fontSizes: (
     h1: 7.8rem,
     body: 1.8rem
 );
-$colors: (
-    primary: rgba(0, 178, 255, 0.9),
-	primaryDark: #0085FF,
-    supportDark1: #000,
-    supportDark2: #171717,
-    supportDark3: #171823,
-    supportLight1: #FFF,
-    supportLight2: #E9F0F4,
+$accentColors: (
+    primary: #00B2FF,
+    secondary: #FFBE16,
     success: #01CC88,
     warning: #FFC107,
     danger: #DC3545
+);
+$colors: (
+    primary: map-get($accentColors, primary),
+    secondary: map-get($accentColors, secondary),
+	primaryLight: lighten(map-get($accentColors, primary), 22%),
+	primaryDark: darken(map-get($accentColors, primary), 12%),
+    supportLight1: #FFF,
+    supportLight2: #E9F0F4,
+    supportDark1: #000,
+    supportDark2: #171717,
+    supportDark3: #171823
 );
 
 // general

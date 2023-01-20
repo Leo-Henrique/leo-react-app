@@ -1,5 +1,6 @@
 import "./scss/style.scss";
 import SVGReact from "./assets/react.svg";
+import SVGRay from "./assets/ray.svg";
 
 export default function App() {
     return (
@@ -18,7 +19,11 @@ export default function App() {
 			<a className="btn"
 			href="https://github.com/Leo-Henrique/leo-react-app"
 			target="_blank">
-				Access repository
+                <SVGRay />
+
+				<span>
+                    Access repository
+                </span>
 			</a>
 		</main>
 	);
