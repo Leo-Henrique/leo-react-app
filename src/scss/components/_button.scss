@@ -1,5 +1,6 @@
+$shadowState: 0 5px 14px transparentize(map-get($colors, primary), 0.86);
+
 .btn {
-	$shadowState: 0 5px 14px transparentize(map-get($colors, primary), 0.75);
 	padding: 1.6rem 4rem;
 	border-radius: 20px;
 	display: inline-flex;
@@ -12,49 +13,83 @@
 		map-get($colors, primaryDark),
 		map-get($colors, primary)
 	);
-    
+
 	@include breakpoint(sm) {
 		border-radius: 15px;
 		padding: 1.4rem 3rem;
 	}
-	/*
-		state mixin = first argument
+}
 
-		Keys names defined in "durations" map, inside on "$transitions" map.
-	*/
-	/*
-		state mixin = second argument
+//  @include state(states, property, transition);
+/*
+    states = first arg (SASS map)
 
-		Map containing states (other maps) called "default", "hover" and "active". Add one or more properties to these inner maps with whatever value you want for the respective state.
+    Map containing the default keys (states): "default", "hover" and "active". These keys receive other maps containing each property and value corresponding to the state.
 
-		The keys / properties defined in "default" are the same properties that will be added to the transitions specified in the map "$transitions".
-	*/
-	@include state("button", (
+    Properties specified in "default" will be used to define the transitions.
+*/
+.btn {
+    @include state((
 		default: (
 			opacity: 1,
 			box-shadow: initial
 		),
 		hover: (
-			opacity: 0.75,
+			opacity: 0.8,
 			box-shadow: $shadowState
 		),
 		active: (
-			opacity: 0.45,
+			opacity: 0.6,
 			box-shadow: $shadowState
 		)
 	));
-    /*
-		stateSVG mixin
+}
+/*
+    property = second arg (CSS property)
 
-        The same as the "state" mixin, but instead of defining a map with properties for each state, only the colors are defined.
+    If you are going to modify the state of just one property, pass values instead of maps in the default keys (default, hover, and active).
 
-        These colors along with the transition will be used in the "path" element of the svg, in the property specified in the third argument of the mixin.
+    The values as well as the transitions will be used in the property specified in the second argument of the mixin.
+*/
+.btn {
+    @include state((
+        default: map-get($colors, supportLight2),
+        active: map-get($colors, primaryDark)
+    ), color);
+}
+/*
+    property = second arg (fill or stroke)
+    standard value: null
+    
+    Passing the "fill" or "stroke" property to the second argument causes the styles to be applied to the "path" selector automatically.
 
-        The svgs normally have colors defined in "fill", but they can also be "stroke" or other properties.
-    */
-    @include stateSVG("button", (
-        default: map-get($colors, secondary),
-        hover: map-get($colors, primaryLight),
+    You can normally use it in conjunction with another instance of "@include mixin", as the transitions will be applied to the "path" selector and will not overwrite the previous ones.
+
+    Use this shape to modify SVG states.
+*/
+.btn {
+    @include state((
+        default: map-get($colors, supportLight2),
+        hover: map-get($colors, secondary),
         active: map-get($colors, primaryDark)
     ), fill);
+}
+/*
+    property = third argument (keyname set to global map $transitions)
+    default value: button
+
+    By default, transitions are defined using the "button" key settings of the "$transition" map.
+
+    Create another key in this map and mention it in the third argument of the mixin to use. If you're not using the second argument, set "null" to it, like this:
+
+    @include state((
+        default: ...,
+        hover: ...
+        active: ...
+    ), null, global);
+*/
+
+// transition added to all properties as multiple instances of "@include state" override transitions
+.btn {
+    @include transition("button", all);
 }

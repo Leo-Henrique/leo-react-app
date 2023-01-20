@@ -25,44 +25,54 @@
 		transition-#{$property}: $value;
 	}
 }
-@mixin state($element, $states) {
-    $propertiesMap: map-get($states, default);
-    @include transition($element, map-keys($propertiesMap));
+@mixin state(
+    $states, 
+    $onlyProperty: null,
+    $typeTransition: button
+) {
+    $isSVG: isSVG($onlyProperty);
+    $property: null;
+    $value: null;
 
-    @each $state, $properties in $states {
-        @each $property, $value in $properties {
-            @if $state == default {
-                #{$property}: $value;
-            } @else if $state == hover {
-                @include desktop {
-                    &:hover {
-                        #{$property}: $value;
-                    }
-                }
-            } @else if $state == active {
-                &:active {
-                    #{$property}: $value;
-                }
+    @each $state, $stateValue in $states {
+        @if $state == default {
+            @if $onlyProperty and $isSVG {
+                path {@include transition($typeTransition, $onlyProperty)};
+
+            } @else if $onlyProperty {
+                @include transition($typeTransition, $onlyProperty);
+
+            } @else {
+                @include transition($typeTransition, map-keys($stateValue));
             }
         }
-    }
-}
-@mixin stateSVG($element, $states, $property) {
-    @each $state, $value in $states {
-        @if $state == default {
-            path {
-                #{$property}: $value;
-                @include transition($element, $property);
+
+        @each $eachProperty, $eachValue in $stateValue {
+            @if $onlyProperty {
+                $property: $onlyProperty;
+                $value: $stateValue;
+            } @else {
+                $property: $eachProperty;
+                $value: $eachValue;
             }
-        } @else if $state == hover {
-            @include desktop {
-                &:hover path {
+            
+            @if $state == default {
+                @if $isSVG {
+                    path {#{$property}: $value;};
+
+                } @else {
                     #{$property}: $value;
                 }
-            }
-        } @else if $state == active {
-            &:active path {
-                #{$property}: $value;
+
+            } @else if $state == hover {
+                &:hover #{$isSVG} {
+                    #{$property}: $value;
+                }
+
+            } @else if $state == active {
+                &:active #{$isSVG} {
+                    #{$property}: $value;
+                }
             }
         }
     }

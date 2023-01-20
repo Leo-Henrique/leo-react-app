@@ -1,0 +1,7 @@
+@function isSVG($property) {
+    @if ($property == fill or $property == stroke) {
+        @return path;
+    } @else {
+        @return null;
+    }
+}
