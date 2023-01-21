@@ -1,10 +1,8 @@
 // responsive
 @mixin breakpoint($size) {
-    @media (
-		#{map-get($mediaQuery, property)}:
-		#{
-			map-get(map-get($mediaQuery, sizes), $size) + 
-			map-get($mediaQuery, unit)
+    @media (mediaQuery("property"): #{ 
+            breakpoint($size) + 
+            mediaQuery("unit")
 		}
 	) {
         @content;

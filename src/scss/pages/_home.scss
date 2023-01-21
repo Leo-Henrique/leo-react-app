@@ -1,9 +1,8 @@
 body {
 	background: linear-gradient(
-		247.12deg, 
-		map-get($colors, supportDark3) -0.29%, 
-		map-get($colors, supportDark2) 100%) 
-		map-get($colors, supportDark2
+        247.12deg, 
+        color("supportDark3") -0.29%, 
+        color("supportDark2") 100%
 	);
 	display: flex;
 	align-items: center;
@@ -13,7 +12,7 @@ body {
 
 .app {
 	text-align: center;
-	padding: 3rem calc(map-get($grid, gutter) / 2);
+	padding: 3rem calc(grid("gutter") / 2);
 
 	&__react {
 		@include margin-bottom(5rem);

@@ -1,4 +1,4 @@
-$shadowState: 0 5px 14px transparentize(map-get($colors, primary), 0.86);
+$shadowState: 0 5px 14px transparentize(color("primary"), 0.86);
 
 .btn {
 	padding: 1.6rem 4rem;
@@ -7,13 +7,8 @@ $shadowState: 0 5px 14px transparentize(map-get($colors, primary), 0.86);
     align-items: center;
     column-gap: 0.6rem;
     white-space: nowrap;
-	color: map-get($colors, supportLight1);
-	background: linear-gradient(
-		266.57deg, 
-		map-get($colors, primaryDark),
-		map-get($colors, primary)
-	);
-
+	color: color("supportLight1");
+	background: linear-gradient(266.57deg, color("primaryDark"), color("primary"));
 	@include breakpoint(sm) {
 		border-radius: 15px;
 		padding: 1.4rem 3rem;
@@ -53,8 +48,8 @@ $shadowState: 0 5px 14px transparentize(map-get($colors, primary), 0.86);
 */
 .btn {
     @include state((
-        default: map-get($colors, supportLight2),
-        active: map-get($colors, primaryDark)
+        default: color("supportLight2"),
+        active: color("primaryDark")
     ), color);
 }
 /*
@@ -69,9 +64,9 @@ $shadowState: 0 5px 14px transparentize(map-get($colors, primary), 0.86);
 */
 .btn {
     @include state((
-        default: map-get($colors, supportLight2),
-        hover: map-get($colors, secondary),
-        active: map-get($colors, primaryDark)
+        default: color("supportLight2"),
+        hover: color("secondary"),
+        active: color("primaryDark")
     ), fill);
 }
 /*

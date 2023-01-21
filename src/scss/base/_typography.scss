@@ -1,12 +1,12 @@
 body {
-    @include font-size(map-get($fontSizes, body));
+    @include font-size(fontSize("body"));
     line-height: 1.5;
     font-weight: 400;
     font-family: "Poppins", sans-serif;
-	color: map-get($colors, supportLight2);
+	color: color("supportLight2");
 }
 h1 {
-    @include font-size(map-get($fontSizes, h1));
+    @include font-size(fontSize("h1"));
     line-height: 1.2;
     font-weight: 600;
 }

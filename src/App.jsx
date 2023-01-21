@@ -5,7 +5,7 @@ import SVGRay from "./assets/ray.svg";
 export default function App() {
     return (
 		<main className="app">
-			<div className="app__react">
+			<div className="app__react ">
 				<a href="https://reactjs.org/"
 				target="_blank"
 				rel="external noopener noreferrer">
