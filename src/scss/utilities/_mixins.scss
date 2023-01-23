@@ -14,7 +14,7 @@
     }
 }
 @mixin animation {
-    @media (preferes-reduced-motion: no-preference) {
+    @media (prefers-reduced-motion: no-preference) {
         @content;
     }
 }

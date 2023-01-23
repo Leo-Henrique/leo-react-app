@@ -39,8 +39,10 @@ body {
             width: 250px;
             height: auto;
             @include center;
-            animation: logoSpin infinite 25s linear;
 
+            @include animation {
+                animation: logoSpin infinite 25s linear;
+            }
             @include breakpoint(sm) {
                 width: 180px;
             }
