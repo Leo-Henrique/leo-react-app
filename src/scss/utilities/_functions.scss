@@ -11,11 +11,14 @@
 @function fontSize($key) {
     @return map-get($fontSizes, $key);
 }
-@function accentColor($key) {
-    @return map-get($accentColors, $key);
-}
 @function color($key) {
-    @return map-get($colors, $key);
+    $accentColorsMap: map-get($accentColors, $key);
+
+    @if $accentColorsMap {
+        @return $accentColorsMap;
+    } @else {
+        @return map-get($variationsColors, $key);
+    }
 }
 
 // general
