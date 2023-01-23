@@ -1,4 +1,4 @@
-// responsive
+// media queries
 @mixin breakpoint($size) {
     @media (mediaQuery("property"): #{ 
             breakpoint($size) + 
@@ -10,6 +10,11 @@
 }
 @mixin desktop {
     @media not all and (hover: none) {
+        @content;
+    }
+}
+@mixin animation {
+    @media (preferes-reduced-motion: no-preference) {
         @content;
     }
 }
@@ -75,12 +80,12 @@
 }
 
 // general
-@mixin center {
-    margin-left: auto;
-    margin-right: auto;
-}
 @mixin SVGResponsive {
     display: block;
     max-width: 100%;
     height: auto;
+}
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
 }
