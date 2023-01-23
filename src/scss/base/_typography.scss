@@ -3,7 +3,7 @@ body {
     line-height: 1.5;
     font-weight: 400;
     font-family: "Poppins", sans-serif;
-	color: color("supportLight2");
+    color: color("supportLight2");
 }
 h1 {
     @include font-size(fontSize("h1"));

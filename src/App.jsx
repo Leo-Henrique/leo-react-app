@@ -4,27 +4,30 @@ import SVGRay from "./assets/ray.svg";
 
 export default function App() {
     return (
-		<main className="app">
-			<div className="app__react ">
-				<a href="https://reactjs.org/"
-				target="_blank"
-				rel="external noopener noreferrer">
-					<SVGReact />
-				</a>
-			</div>
+        <main className="app">
+            <div className="app__react ">
+                <a
+                    href="https://reactjs.org/"
+                    target="_blank"
+                    rel="external noopener noreferrer"
+                >
+                    <SVGReact />
+                </a>
+            </div>
 
-			<h1 className="app__title"
-			translate="no">Léo React App</h1>
+            <h1 className="app__title" translate="no">
+                Léo React App
+            </h1>
 
-			<a className="btn"
-			href="https://github.com/Leo-Henrique/leo-react-app"
-			target="_blank">
+            <a
+                className="btn"
+                href="https://github.com/Leo-Henrique/leo-react-app"
+                target="_blank"
+            >
                 <SVGRay />
 
-				<span>
-                    Access repository
-                </span>
-			</a>
-		</main>
-	);
+                <span>Access repository</span>
+            </a>
+        </main>
+    );
 }

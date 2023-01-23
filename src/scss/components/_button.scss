@@ -1,18 +1,22 @@
 $shadowState: 0 5px 14px transparentize(color("primary"), 0.86);
 
 .btn {
-	padding: 1.6rem 4rem;
-	border-radius: 20px;
-	display: inline-flex;
+    padding: 1.6rem 4rem;
+    border-radius: 20px;
+    display: inline-flex;
     align-items: center;
     column-gap: 0.6rem;
     white-space: nowrap;
-	color: color("supportLight1");
-	background: linear-gradient(266.57deg, color("primaryDark"), color("primary"));
-	@include breakpoint(sm) {
-		border-radius: 15px;
-		padding: 1.4rem 3rem;
-	}
+    color: color("supportLight1");
+    background: linear-gradient(
+        266.57deg,
+        color("primaryDark"),
+        color("primary")
+    );
+    @include breakpoint(sm) {
+        border-radius: 15px;
+        padding: 1.4rem 3rem;
+    }
 }
 
 //  @include state(states, property, transition);
@@ -25,19 +29,19 @@ $shadowState: 0 5px 14px transparentize(color("primary"), 0.86);
 */
 .btn {
     @include state((
-		default: (
-			opacity: 1,
-			box-shadow: initial
-		),
-		hover: (
-			opacity: 0.8,
-			box-shadow: $shadowState
-		),
-		active: (
-			opacity: 0.6,
-			box-shadow: $shadowState
-		)
-	));
+        default: (
+            opacity: 1,
+            box-shadow: initial,
+        ),
+        hover: (
+            opacity: 0.8,
+            box-shadow: $shadowState,
+        ),
+        active: (
+            opacity: 0.6,
+            box-shadow: $shadowState,
+        ),
+    ));
 }
 /*
     property = second arg (CSS property)
@@ -49,7 +53,7 @@ $shadowState: 0 5px 14px transparentize(color("primary"), 0.86);
 .btn {
     @include state((
         default: color("supportLight2"),
-        active: color("primaryDark")
+        active: color("primaryDark"),
     ), color);
 }
 /*
@@ -66,7 +70,7 @@ $shadowState: 0 5px 14px transparentize(color("primary"), 0.86);
     @include state((
         default: color("supportLight2"),
         hover: color("secondary"),
-        active: color("primaryDark")
+        active: color("primaryDark"),
     ), fill);
 }
 /*

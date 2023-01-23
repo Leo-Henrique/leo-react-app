@@ -16,18 +16,14 @@
 
 // transitions and states
 @mixin transition($type, $properties...) {
-	$transition: map-get($transitions, $type);
+    $transition: map-get($transitions, $type);
     transition-property: $properties;
 
-	@each $property, $value in $transition {
-		transition-#{$property}: $value;
-	}
+    @each $property, $value in $transition {
+        transition-#{$property}: $value;
+    }
 }
-@mixin state(
-    $states, 
-    $onlyProperty: null,
-    $typeTransition: button
-) {
+@mixin state($states, $onlyProperty: null, $typeTransition: button) {
     $isSVG: isSVG($onlyProperty);
     $property: null;
     $value: null;
@@ -35,13 +31,16 @@
     @each $state, $stateValue in $states {
         @if $state == default {
             @if $onlyProperty and $isSVG {
-                path {@include transition($typeTransition, $onlyProperty)};
-
+                path {
+                    @include transition($typeTransition, $onlyProperty);
+                }
             } @else if $onlyProperty {
                 @include transition($typeTransition, $onlyProperty);
-
             } @else {
-                @include transition($typeTransition, map-keys($stateValue));
+                @include transition(
+                    $typeTransition,
+                    map-keys($stateValue)
+                );
             }
         }
 
@@ -53,20 +52,19 @@
                 $property: $eachProperty;
                 $value: $eachValue;
             }
-            
+
             @if $state == default {
                 @if $isSVG {
-                    path {#{$property}: $value;};
-
+                    path {
+                        #{$property}: $value;
+                    }
                 } @else {
                     #{$property}: $value;
                 }
-
             } @else if $state == hover {
                 &:hover #{$isSVG} {
                     #{$property}: $value;
                 }
-
             } @else if $state == active {
                 &:active #{$isSVG} {
                     #{$property}: $value;

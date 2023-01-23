@@ -5,9 +5,6 @@ import viteSvgr from "vite-plugin-svgr";
 const viteSvgrConfigs = { exportAsDefault: true };
 
 export default defineConfig({
-    plugins: [
-		react(), 
-		viteSvgr(viteSvgrConfigs)
-	],
-	base: "/leo-react-app"
+    plugins: [react(), viteSvgr(viteSvgrConfigs)],
+    base: "/leo-react-app",
 });

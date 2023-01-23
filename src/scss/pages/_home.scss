@@ -1,55 +1,61 @@
 body {
-	background: linear-gradient(
-        247.12deg, 
-        color("supportDark3") -0.29%, 
+    background: linear-gradient(
+        247.12deg,
+        color("supportDark3") -0.29%,
         color("supportDark2") 100%
-	);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .app {
-	text-align: center;
-	padding: 3rem calc(grid("gutter") / 2);
+    text-align: center;
+    padding: 3rem calc(grid("gutter") / 2);
 
-	&__react {
-		@include margin-bottom(5rem);
+    &__react {
+        @include margin-bottom(5rem);
 
-		a {
-			display: block;
-			padding: 1.2rem;
+        a {
+            display: block;
+            padding: 1.2rem;
 
-			@include state((
-				default: (opacity: 1),
-				hover: (opacity: 0.65),
-				active: (opacity: 0.45)
-			));
-		}
-		svg {
-			max-width: 100%;
-			display: block;
-			width: 250px;
-			height: auto;
-			@include center;
-			animation: logoSpin infinite 25s linear;
+            @include state((
+                default: (
+                    opacity: 1,
+                ),
+                hover: (
+                    opacity: 0.65,
+                ),
+                active: (
+                    opacity: 0.45,
+                ),
+            ));
+        }
+        svg {
+            max-width: 100%;
+            display: block;
+            width: 250px;
+            height: auto;
+            @include center;
+            animation: logoSpin infinite 25s linear;
 
-			@include breakpoint(sm) {
-				width: 180px;
-			}
-		}
-	}
-	&__title {
-		@include margin-bottom(10rem);
-	}
+            @include breakpoint(sm) {
+                width: 180px;
+            }
+        }
+    }
+    &__title {
+        @include margin-bottom(10rem);
+    }
 }
 
 @keyframes logoSpin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-	}
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
