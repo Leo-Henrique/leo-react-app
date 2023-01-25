@@ -28,7 +28,7 @@
         transition-#{$property}: $value;
     }
 }
-@mixin state($states, $onlyProperty: null, $typeTransition: button) {
+@mixin state($states, $onlyProperty: null, $typeTransition: "button") {
     $isSVG: isSVG($onlyProperty);
     $property: null;
     $value: null;
@@ -73,6 +73,11 @@
             } @else if $state == active {
                 &:active #{$isSVG} {
                     #{$property}: $value;
+                }
+            } @else if $state == focus {
+                &:focus #{$isSVG} {
+                    #{$property}: $value;
+                    outline: none;
                 }
             }
         }
