@@ -43,7 +43,6 @@ I like to use the term **boilerplate** to refer to leo-react-app because it is i
 
 ## 💻 Resources
 
-* [React](https://pt-br.reactjs.org/) 
 * [Vite](https://vitejs.dev/)
 	* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react) - official Vite plugin for React (includes features like [react-refresh](https://www.npmjs.com/package/react-refresh) and [JSX runtime](https://github.com/alloc/vite-react-jsx#faq), for example)
 	* [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr) - loader to turn SVGs into React components (based on [SVGR](https://react-svgr.com/))
@@ -51,6 +50,7 @@ I like to use the term **boilerplate** to refer to leo-react-app because it is i
 	* [RFS](https://github.com/twbs/rfs#readme) - automatic resizing of font sizes and spacing with SASS
 * [normalize.css](https://github.com/necolas/normalize.css) - normalizes default styling on some HTML elements consistently across browsers
 * [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset) - redefines most styles and sets CSS standards (based on [Meyer Web Reset](https://meyerweb.com/eric/tools/css/reset/)).
+* [React](https://pt-br.reactjs.org/) 
 
 ## 🚀 Getting stated
 
