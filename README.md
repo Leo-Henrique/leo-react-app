@@ -43,7 +43,8 @@ I like to use the term **boilerplate** to refer to leo-react-app because it is i
 
 ## 💻 Resources
 
-* [React](https://pt-br.reactjs.org/) with [Vite](https://vitejs.dev/)
+* [React](https://pt-br.reactjs.org/) 
+* [Vite](https://vitejs.dev/)
 	* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react) - official Vite plugin for React (includes features like [react-refresh](https://www.npmjs.com/package/react-refresh) and [JSX runtime](https://github.com/alloc/vite-react-jsx#faq), for example)
 	* [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr) - loader to turn SVGs into React components (based on [SVGR](https://react-svgr.com/))
 * [SASS](https://www.npmjs.com/package/sass) - JS implementation of the SASS preprocessor
