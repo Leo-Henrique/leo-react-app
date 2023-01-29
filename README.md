@@ -80,11 +80,10 @@ npm start
 
 ## ⚙️ Configure the boilerplate for your application
 
-* In `vite.config.js`, change [base](https://vitejs.dev/config/shared-options.html#base) to a URL that will use the public basepath. Exclude if you are not going to deploy the application.
-* In `public/assets/`, include your app's favicons. I like to use the [Real Favicon Generator](https://realfavicongenerator.net/) to generate my favicons.
+* In `public`, include your application's favicons. I like to use [Real Favicon Generator](https://realfavicongenerator.net/) to generate my favicons.
 * In `index.html`, change the metadata according to your application. I assume you will also use some minimal metadata from the [Open Graph protocol](https://ogp.me/).
-	* Use only `/assets` instead of "*public/assets*" to [reference static files in index.html with Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
-* In `src/scss/utilies/_variables.scss`, change the UI of your application.
+    * Only  use `/` instead of `public/` to [reference static files in index.html with Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
+* In `src/scss/utilities/_variables.scss`, change the UI of your application.
 	* `$rfs-rem-value` is based on the 10px value of the *font size root*, as I use it in [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset).
 	* The names you use in map keys are used in mixins. You can see how maps and mixins are used in the following files inside the folder `scss`:
 		* `base/typography` - example of how to use the `$fontSize` map together with the [RFS](https://github.com/twbs/rfs#readme).

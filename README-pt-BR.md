@@ -80,11 +80,10 @@ npm start
 
 ## ⚙️ Configure o boilerplate para sua aplicação
 
-* Em `vite.config.js`, altere [base](https://vitejs.dev/config/shared-options.html#base) para uma URL que utilizará o caminho base público. Exclua caso não for fazer o deploy da aplicação.
-* Em `public/assets/`, inclua os favicons da sua aplicação. Eu gosto de utilizar o [Real Favicon Generator](https://realfavicongenerator.net/) para gerar meus favicons.
+* Em `public`, inclua os favicons da sua aplicação. Eu gosto de utilizar o [Real Favicon Generator](https://realfavicongenerator.net/) para gerar meus favicons.
 * Em `index.html`, altere os metadados conforme sua aplicação. Eu pressuponho que você também utilizará alguns metadados mínimos do [protocolo Open Graph](https://ogp.me/).
-	* Utilize apenas `/assets` em vez de "*public/assets*" para [referenciar arquivos estáticos no index.html com Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
-* Em `src/scss/utilies/_variables.scss`, altere a UI da sua aplicação.
+	* Utilize apenas `/` em vez de `public/` para [referenciar arquivos estáticos no index.html com Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
+* Em `src/scss/utilities/_variables.scss`, altere a UI da sua aplicação.
 	* `$rfs-rem-value` se baseia no valor de 10px do *font size root*, conforme utilizo em [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset).
 	* Os nomes que você utiliza nas chaves dos mapas são utilizados nos mixins. Você pode conferir como os mapas e os mixins são usados nos arquivos a seguir, dentro da pasta `scss`:
 		* `base/typography` - exemplo de como utilizar o mapa `$fontSize` junto com o [RFS](https://github.com/twbs/rfs#readme).
