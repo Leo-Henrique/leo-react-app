@@ -4,5 +4,5 @@ import viteSvgr from "vite-plugin-svgr";
 
 export default defineConfig({
     plugins: [react(), viteSvgr({ exportAsDefault: true })],
-    base: `./`,
+    base: "./",
 });
