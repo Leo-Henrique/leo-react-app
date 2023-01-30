@@ -7,7 +7,7 @@
         "start": "vite --open",
         "build": "vite build",
         "preview": "vite preview --open",
-        "deploy": "git subtree push --prefix dist origin gh-pages",
+        "deploy": "git subtree push --prefix dist origin gh-pages"
     },
     "dependencies": {
         "leo-css-reset": "^1.0.0",
