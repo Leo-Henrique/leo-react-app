@@ -52,17 +52,16 @@ I like to use the term **boilerplate** to refer to leo-react-app because it is i
 	* [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr) - loader to turn SVGs into React components (based on [SVGR](https://react-svgr.com/))
 * [SASS](https://www.npmjs.com/package/sass) - JS implementation of the SASS preprocessor
 	* [RFS](https://github.com/twbs/rfs#readme) - automatic resizing of font sizes and spacing with SASS
-* [normalize.css](https://github.com/necolas/normalize.css) - normalizes default styling on some HTML elements consistently across browsers
-* [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset) - redefines most styles and sets CSS standards (based on [Meyer Web Reset](https://meyerweb.com/eric/tools/css/reset/))
+* [leo-reset.css](https://github.com/Leo-Henrique/leo-reset.css) - resetting the default styles set by browsers, but maintaining some and totally beneficial styling standards.
 * [React](https://pt-br.reactjs.org/) - JavaScript library
 
-## 🚀 Getting stated
+## 🚀 Get Started
 
-This repository uses the [npm](https://www.npmjs.com/) to manage third-party packages. [Install NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) after installing [Node.js](https://nodejs.org/pt-br/).
+This repository uses the [npm](https://www.npmjs.com/) to manage third-party packages. Perform the [Installation of Node.js](https://nodejs.org/pt-br/) which already has npm as default package manager.
 
 ### Cloning the repository
 
-Use [degit](https://github.com/Rich-Harris/degit) to clone `leo-react-app`:
+Use [degit](https://github.com/Rich-Harris/degit) to clone leo-react-app:
 
 ```bash
 npx degit leo-henrique/leo-react-app#app your-app
@@ -76,7 +75,7 @@ npm install
 
 ### Start the development server
 
-A new tab [localhost:5173/leo-react-app](http://localhost:5173/leo-react-app) will open in your browser.
+A new tab [localhost:5173](http://localhost:5173) will open in your browser.
 
 ```
 npm start
