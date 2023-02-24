@@ -35,6 +35,10 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Leo-Henrique/leo-react-app/blob/main/README.md)
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-react-app/blob/main/README-pt-BR.md)
 
+**⚠️ Warning**
+
+This readme was written primarily with Google Translate. I'll be happy if you make an exception for any grammatical errors!
+
 ## 🔎 Introduction
 
 `leo-react-app` it is a template / development environment in React and SASS for the web using Vite.
@@ -84,7 +88,7 @@ npm start
 * In `index.html`, change the metadata according to your application. I assume you will also use some minimal metadata from the [Open Graph protocol](https://ogp.me/).
     * Only  use `/` instead of `public/` to [reference static files in index.html with Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
 * In `src/scss/utilities/_variables.scss`, change the UI of your application.
-	* `$rfs-rem-value` is based on the 10px value of the *font size root*, as I use it in [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset).
+	* `$rfs-rem-value` is based on the 10px value of the *font size root*, as I use it in [leo-reset.css](https://github.com/Leo-Henrique/leo-reset.css).
 	* The names you use in map keys are used in mixins. You can see how maps and mixins are used in the following files inside the folder `scss`:
 		* `base/typography` - example of how to use the `$fontSize` map together with the [RFS](https://github.com/twbs/rfs#readme).
 		* `layout/grid` - example of how to use the `$grid` map together with breakpoints.
