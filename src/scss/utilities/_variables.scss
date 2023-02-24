@@ -14,7 +14,7 @@ $mediaQuery: (
 // rfs config
 $rfs-rem-value: 10;
 $rfs-factor: 5;
-$rfs-breakpoint: map-get(map-get($mediaQuery, sizes), xl);
+$rfs-breakpoint: map-get(map-get($mediaQuery, "sizes"), "xl");
 
 // UI
 $grid: (
@@ -37,8 +37,8 @@ $accentColors: (
     danger: #dc3545,
 );
 $variationsColors: (
-    primaryLight: lighten(map-get($accentColors, primary), 22%),
-    primaryDark: darken(map-get($accentColors, primary), 12%),
+    primaryLight: lighten(map-get($accentColors, "primary"), 22%),
+    primaryDark: darken(map-get($accentColors, "primary"), 12%),
     supportLight1: #fff,
     supportLight2: #e9f0f4,
     supportDark1: #000,
