@@ -96,6 +96,7 @@ npm start
 * `npm start` - inicia o servidor de desenvolvimento e abre em seu navegador.
 * `npm run build` - minifica o aplicativo para produção.
 * `npm run preview` - visualize localmente sua produção em seu navegador.
+* `npm run deploy` - faz o deploy da sua aplicação no GitHub segundo a pasta "dist"
 
 ## 🔗 Recursos úteis
 
