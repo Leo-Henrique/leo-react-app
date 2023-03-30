@@ -78,7 +78,7 @@ This repository uses the [npm](https://www.npmjs.com/) to manage third-party pac
 
 ### Cloning the repository
 
-Use [degit](https://github.com/Rich-Harris/degit) to clone leo-react-app. You can mention the name you want for your project's root folder by specifying just a space after the command or use the command already inside your root folder.
+Use [degit](https://github.com/Rich-Harris/degit) to clone leo-react-app. You can mention the name you want for your project's root folder by specifying only a space after the command or use the command inside your root folder.
 
 If you opted for **SASS**:
 ```bash
