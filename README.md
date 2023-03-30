@@ -85,7 +85,7 @@ If you opted for **SASS**:
 npx degit leo-henrique/leo-react-app#sass
 ```
 
-If you opted for **styled-components**:
+If you opted for **styled-components** (no additional HTML, just minimal structure):
 ```bash
 npx degit leo-henrique/leo-react-app#styled-components
 ```
