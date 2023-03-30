@@ -30,6 +30,14 @@
 		alt="SASS logo"
 		width="65" />
 	</a>
+    <a href="https://styled-components.com/"
+	target="_blank"
+	rel="external referrer noopener"
+	style="display: inline-block; padding: 8px">
+        <img src="https://avatars.githubusercontent.com/u/20658825?v=4"
+		alt="styled-components logo"
+		width="65" />
+	</a>
 </div>
 
 [![en](https://img.shields.io/badge/idioma-en-red.svg)](https://github.com/Leo-Henrique/leo-react-app/blob/main/README.md)
@@ -37,31 +45,45 @@
 
 ## 🔎 Introdução
 
-`leo-react-app` se trata de um template / ambiente de desenvolvimento em React e SASS para web utilizando Vite.
+`leo-react-app` se trata de um template / ambiente de desenvolvimento em React para web utilizando Vite.
 
-Gosto de utilizar o termo **boilerplate** para se referir a leo-react-app pelo mesmo possuir o objetivo de fornecer uma estrutura de pastas e comandos mínima, mas raramente desnecessária ou desproveitosa em um aplicativo front-end baseado em React com SASS.
+Gosto de utilizar o termo **boilerplate** para se referir a leo-react-app pelo mesmo possuir o objetivo de fornecer uma estrutura de pastas e comandos mínima, mas raramente desnecessária ou desproveitosa em um aplicativo front-end baseado em React.
 
 ## 💻 Recursos
 
+Você pode utilizar duas opções do `leo-react-app`. Uma é com `SASS` e a outra com `styled-components`. Em ambas, há os seguintes recursos:
+
+* [React](https://pt-br.reactjs.org/)
 * [Vite](https://vitejs.dev/) - ambiente de desenvolvimento para front-end
 	* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react) - plugin oficial do Vite para o React (inclui recursos como [react-refresh](https://www.npmjs.com/package/react-refresh) e [JSX runtime](https://github.com/alloc/vite-react-jsx#faq), por exemplo)
 	* [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr) - loader para transformar SVGs em componentes React (baseado em [SVGR](https://react-svgr.com/))
+* [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset) - redefine a maioria das estilizações e define padrões CSS
+
+### Com SASS:
+
 * [SASS](https://www.npmjs.com/package/sass) - implementação JS do pré-processador SASS
-	* [RFS](https://github.com/twbs/rfs#readme) - redimensionamento automático de tamanhos de fonte e espaçamentos com SASS
-* [normalize.css](https://github.com/necolas/normalize.css) - normaliza estilizações padrões em alguns elementos HTML de forma consistente entre os navegadores
-* [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset) - redefine a maioria das estilizações e define padrões CSS (baseado no [Meyer Web Reset](https://meyerweb.com/eric/tools/css/reset/))
-* [React](https://pt-br.reactjs.org/) - biblioteca JavaScript
+* [RFS](https://github.com/twbs/rfs#readme) - redimensionamento automático de tamanhos de fonte e espaçamentos com SASS
+
+### Com styled-components:
+
+* [styled-components](https://styled-components.com/) - apenas a própria biblioteca
 
 ## 🚀 Iniciando
 
-Este repositório utiliza o [npm](https://www.npmjs.com/) para gerenciar os pacotes de terceiros. Efetue a [instalação do NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) após a instalação do [Node.js](https://nodejs.org/pt-br/).
+Este repositório utiliza o [npm](https://www.npmjs.com/) para gerenciar os pacotes de terceiros. Efetue a [instalação do Node.js](https://nodejs.org/pt-br/) que já possui o npm como gerenciador de pacotes padrão.
 
 ### Clonando o repositório
 
-Utilize o [degit](https://github.com/Rich-Harris/degit) para clonar o `leo-react-app`:
+Utilize o [degit](https://github.com/Rich-Harris/degit) para clonar o `leo-react-app`. Você pode mencionar o nome que deseja para a pasta raiz do seu projeto especificando apenas um espaço após o comando ou utilizar o comando dentro da sua pasta raiz.
 
+Se você optou por **SASS**:
 ```bash
-npx degit leo-henrique/leo-react-app#app seu-aplicativo
+npx degit leo-henrique/leo-react-app#sass
+```
+
+Se você optou por **styled-components**:
+```bash
+npx degit leo-henrique/leo-react-app#styled-components
 ```
 
 ### Instale as dependências
@@ -83,13 +105,16 @@ npm start
 * Em `public`, inclua os favicons da sua aplicação. Eu gosto de utilizar o [Real Favicon Generator](https://realfavicongenerator.net/) para gerar meus favicons.
 * Em `index.html`, altere os metadados conforme sua aplicação. Eu pressuponho que você também utilizará alguns metadados mínimos do [protocolo Open Graph](https://ogp.me/).
 	* Utilize apenas `/` em vez de `public/` para [referenciar arquivos estáticos no index.html com Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
+
+### Com SASS:
+
 * Em `src/scss/utilities/_variables.scss`, altere a UI da sua aplicação.
 	* `$rfs-rem-value` se baseia no valor de 10px do *font size root*, conforme utilizo em [leo-css-reset](https://github.com/Leo-Henrique/leo-css-reset).
-	* Os nomes que você utiliza nas chaves dos mapas são utilizados nos mixins. Você pode conferir como os mapas e os mixins são usados nos arquivos a seguir, dentro da pasta `scss`:
-		* `base/typography` - exemplo de como utilizar o mapa `$fontSize` junto com o [RFS](https://github.com/twbs/rfs#readme).
-		* `layout/grid` - exemplo de como utilizar o mapa `$grid` junto com os pontos de interrupção.
-		* `components/button` - exemplo de como utilizar o mixin `state`.
-		* `pages/home` - exemplo simples de como compor sua interface utilizando todos os recursos SASS com CSS BEM.
+
+### Com styled-components:
+
+* Em `src/styles/theme.js`, altere a UI da sua aplicação.
+* Em `src/styles/mediaQueries.js`, altere os breakpoints caso desejar.
 
 ## 👨‍💻 Scripts 
 
@@ -97,12 +122,3 @@ npm start
 * `npm run build` - minifica o aplicativo para produção.
 * `npm run preview` - visualize localmente sua produção em seu navegador.
 * `npm run deploy` - faz o deploy da sua aplicação no GitHub segundo a pasta "dist"
-
-## 🔗 Recursos úteis
-
-Alguns links que contém minhas inspirações ao criar a arquitetura e todos os outros recursos em SASS.
-
-* [Media queries max-width do Bootstrap](https://getbootstrap.com/docs/5.3/layout/breakpoints/#max-width)
-* [Containers responsivos do Bootstrap](https://getbootstrap.com/docs/5.3/layout/containers/#responsive-containers)
-* [Estruturando projetos SASS](https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4)
-* [Arquitetura SASS](https://gist.github.com/AdamMarsden/7b85e8d5bdb5bef969a0)
