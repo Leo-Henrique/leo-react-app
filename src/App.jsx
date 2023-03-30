@@ -1,33 +1,12 @@
-import "./scss/style.scss";
-import SVGReact from "./assets/react.svg";
-import SVGRay from "./assets/ray.svg";
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
+import GlobalStyle from "./styles/Global";
 
 export default function App() {
     return (
-        <main className="app">
-            <div className="app__react ">
-                <a
-                    href="https://reactjs.org/"
-                    target="_blank"
-                    rel="external noopener noreferrer"
-                >
-                    <SVGReact />
-                </a>
-            </div>
-
-            <h1 className="app__title" translate="no">
-                Léo React App
-            </h1>
-
-            <a
-                className="btn"
-                href="https://github.com/Leo-Henrique/leo-react-app"
-                target="_blank"
-            >
-                <SVGRay />
-
-                <span>Access repository</span>
-            </a>
-        </main>
+        <ThemeProvider theme={theme}>
+            <GlobalStyle />
+        </ThemeProvider>
     );
 }
