@@ -41,11 +41,6 @@ const theme = {
             timingFunction: "ease-in-out",
         },
     },
-    zIndex: {
-        header: 10,
-        nav: 20,
-        headerContent: 30,
-    },
 };
 
 export default theme;
