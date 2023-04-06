@@ -14,7 +14,7 @@ const theme = {
             md: "540px",
             sm: "100%",
         },
-        gutter: "30px",
+        gutter: 30,
     },
     fontFamilies: ["'Poppins', sans-serif"],
     fontSizes: {
